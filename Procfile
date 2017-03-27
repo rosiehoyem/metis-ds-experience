@@ -1,1 +1,1 @@
-web: gunicorn quizr:app
+web: gunicorn ds_app:app
