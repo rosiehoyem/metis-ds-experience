@@ -10,6 +10,12 @@ ds_app/static/Chart.min.js
 ds_app/static/blog.css
 ds_app/static/bootstrap.css
 ds_app/static/bootstrap.min.js
+ds_app/static/flatly_bootstrap.css
 ds_app/templates/index.html
 ds_app/templates/layout.html
+ds_app/templates/metis_0.html
 ds_app/templates/metis_1.html
+ds_app/templates/metis_2.html
+ds_app/templates/metis_3.html
+ds_app/templates/metis_4.html
+ds_app/templates/metis_5.html
