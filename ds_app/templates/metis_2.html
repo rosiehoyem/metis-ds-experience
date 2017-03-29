@@ -4,5 +4,46 @@
   <h2 class="blog-post-title">Onsite in Chicago, Weeks 4-6</h2>
   <p class="blog-post-meta">February 6th through February 24th, 2017</p>
 
-  <h3>Coming Soon.</h3>
+  <p>Weeks four through six took us through all of the classification models and a whole grab bag of topics related to working in the cloud and web development.</p>
+
+  <p>The big event of week 6 at Metis was the completion of our 3rd project, McNulty. This project was to be focused on the different classification models we’re covered in the past weeks. I again learned the lesson the hard way that real work problems that involve gathering real world messy data are not appropriate for 2 week learning projects.</p>
+
+  <p>My topic, what factors contribute to high schools successfully preparing kids for college, seemed like a straightforward enough project. Alas, it was not. Although the data I collected did not come together how I had hoped, I did manage to get some practice working with a variety of classification models.</p>
+
+  <h3>Classification Models</h3>
+
+  {% for model in cm %}
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3>{{ model.name }}</h3>
+      <p><strong>Key Concept:</strong></p>  
+      <p>{{ model.key_concept }}</p>
+      <p><strong>Assumptions:</strong></p>  
+      <p>{{ model.assumptions }}</p>
+      <p><strong>Steps:</strong></p>  
+      <p>{{ model.steps|safe }}</p>
+      <p><strong>Hyperparameters:</strong></p>  
+      <p>{{ model.hyper_parameters|safe }}</p>
+      <hr>
+      <h4>Model Characteristics</h4>  
+      <table class='table table-striped'>
+        <tr>
+          <td>Interpretability</td>
+          <td>{{ model.interpretability }}</td>
+        </tr>
+        <tr>
+          <td>Computation Time</td>
+          <td>{{ model.computation_time }}</td>
+        </tr>
+        <tr>
+          <td>Accuracy</td>
+          <td>{{ model.accuracy }}</td>
+        </tr>
+      </table>  
+    </div>
+  </div> 
+  <hr>
+  {% endfor %}
+</div>
+
 {% endblock %}

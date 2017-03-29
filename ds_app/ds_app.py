@@ -12,19 +12,17 @@ app.config.update(dict(
 ))
 app.config.from_envvar('DS_APP_SETTINGS', silent=True)
 
-def get_vocab():
+def get_classification_models():
     base = "https://docs.google.com/spreadsheets/d/"
     doc_id = "13uFW3lriigsAKJTAn_Ilo3fo7ZdeLUKbtqOe65Bf4iw"
-    export_sheet = "/export?gid=577814466&format=csv"
+    export_sheet = "/export?gid=261999384&format=csv"
     url = base + doc_id + export_sheet
-    vocab = pd.read_csv(url,index_col=False)
-    sample = vocab.sample(10)
-    return sample.to_dict(orient = "records")
+    models = pd.read_csv(url,index_col=False)
+    return models.to_dict(orient = "records")
 
 @app.route('/')
 def index():
-    vocab = get_vocab()
-    return render_template('index.html', vocab=vocab)
+    return render_template('index.html')
 
 @app.route('/metis_blog_0')
 def metis_blog_0():
@@ -36,7 +34,8 @@ def metis_blog_1():
 
 @app.route('/metis_blog_2')
 def metis_blog_2():
-    return render_template('metis_2.html')
+    classification_models = get_classification_models()
+    return render_template('metis_2.html', cm=classification_models)
 
 @app.route('/metis_blog_3')
 def metis_blog_3():
