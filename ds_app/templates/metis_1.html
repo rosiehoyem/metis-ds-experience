@@ -56,7 +56,7 @@
 
   <p>After collecting data and doing a fair amount of wrangling to combine 3 data sources, I arrived a dataset of just over 300 properties. I then began the modeling process. As an example, let's take this results summary from and initial pass I did with OLS Linear Regression. I should not also that for this modeling exercise, I did not leave out a portion of the data to act as a test set as I am not trying to predict anything. I opted instead for optimal use of the data I have in order to understand what features had the most influence.</p>
 
-  Image of Summary Results
+  <!-- Image of Summary Results -->
 
   <p>When creating models, it is quite easy to fixate on the "score" of the model, which for Linear Regression is often the R-squared score. In this case the F-score was .83, which means that about 83 percent of the variation was explained by this model. Before going any further though, there are also some problematic things about this model that need to be addressed before looking at the coefficients or interpretting the model for conclusions about the features being measured.</p>
 
@@ -67,17 +67,27 @@
     <li>The features are independent.</li>
   </ul>
 
+  <p>Some tests we can use to test these assumptions:</p>
   <ul>
-    <li>R2: SSE/SSS is the portion of variation explained by the model</li>
+    <li>
+      R2: SSE/SSS is the portion of variation explained by the model
+    </li>
     <li>Prob (F-statisic): If p-value < 0.05, we  can reject the null hypothesis.</li>
     <li>P >|t|: if p-value < 0.05, we can reject the null hypothesis: This variable does contribute to this model</li>
-    <li>Prob(Omnibus): The p-value for this  test. If  p-value < 0.05, we  reject  the null  hypothesis:</li> 
-    <li>ε does  not exactly follow  the normal  distribution that  we  assumed.</li> 
-    <li>Prob(Omnibus):  The p-value for this  test.</li>     
-    <li>Jaque Beara: Normality Test</li>
-    <li>Prob(JB) Null  hypothesis:  ε is  normally  distributed.</li> 
-    <li>Skewness and Kurtosis: Idea is we  are looking for a skewness coeff.  ~ 0,  and Kurtosis  ~ 3. JB  tests if  those conditions are held  against alternatives.</li>  
-    <li>Condition Number: Note  that  is  the condition  number  becomes quite large,  then  this  implies that  the matrix  is  ill-posed   (does not have  a unique, well-defined  solution). This  may be  due to  multicollinear relationships  between independent variables.</li>
+    <li>
+      Prob(Omnibus): The p-value for this  test. If p-value < 0.05, we reject the null  hypothesis, meaning that we have violated the assumptions linear regression does  not exactly follow  the normal  distribution that  we  assumed.</li>     
+    <li>
+      Jaque Beara: Normality Test
+    </li>
+    <li>
+      Prob(JB) Null hypothesis: ε is  normally  distributed.
+    </li> 
+    <li>
+      Skewness and Kurtosis: Idea is we  are looking for a skewness coeff.  ~ 0,  and Kurtosis  ~ 3. JB  tests if  those conditions are held against alternatives.
+    </li>  
+    <li>
+      Condition Number: Note that is the condition number  becomes quite large, then this  implies that  the matrix is ill-posed  (does not have a unique, well-defined solution). This may be due to multicollinear relationships between independent variables.
+    </li>
   </ul>
 </div>
 {% endblock %}

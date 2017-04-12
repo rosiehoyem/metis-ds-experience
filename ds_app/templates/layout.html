@@ -27,10 +27,21 @@
 
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://rosiehoyem.herokuapp.com">My Home Site</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Resources <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jump to a Page <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><a href="{{ url_for('metis_blog_0') }}">Part 0, The Prequel</a></li>
+                <li><a href="{{ url_for('metis_blog_1') }}">Part 1, Weeks 1-3</a></li>
+                <li><a href="{{ url_for('metis_blog_2') }}">Part 2, Weeks 4-6</a></li>
+                <li><a href="{{ url_for('metis_blog_3') }}">Part 3, Weeks 7-9</a></li>
+                <li><a href="{{ url_for('metis_blog_4') }}">Part 4, Weeks 10-12</a></li>
+                <li><a href="{{ url_for('metis_blog_5') }}">Part 5, Final Thoughts</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More About Me<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://rosiehoyem.herokuapp.com">My Home Site</a></li>
                 <li><a href="https://www.linkedin.com/in/rosiehoyem/">LinkedIn</a></li>
                 <li><a href="https://github.com/rosiehoyem">Github</a></li>
                 <li><a href="https://resume.creddle.io/resume/cts0tgxuqk8">Resume</a></li>

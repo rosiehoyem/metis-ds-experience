@@ -26,10 +26,21 @@
 
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://rosiehoyem.herokuapp.com">My Home Site</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Resources <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jump to a Page <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><a href="{{ url_for('metis_blog_0') }}">Part 0, The Prequel</a></li>
+                <li><a href="{{ url_for('metis_blog_1') }}">Part 1, Weeks 1-3</a></li>
+                <li><a href="{{ url_for('metis_blog_2') }}">Part 2, Weeks 4-6</a></li>
+                <li><a href="{{ url_for('metis_blog_3') }}">Part 3, Weeks 7-9</a></li>
+                <li><a href="{{ url_for('metis_blog_4') }}">Part 4, Weeks 10-12</a></li>
+                <li><a href="{{ url_for('metis_blog_5') }}">Part 5, Final Thoughts</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More About Me<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://rosiehoyem.herokuapp.com">My Home Site</a></li>
                 <li><a href="https://www.linkedin.com/in/rosiehoyem/">LinkedIn</a></li>
                 <li><a href="https://github.com/rosiehoyem">Github</a></li>
                 <li><a href="https://resume.creddle.io/resume/cts0tgxuqk8">Resume</a></li>
@@ -44,19 +55,27 @@
     <br>
     <br>
     <div class="container">
-      <div class="jumbotron">
-        <div class="text-center">
-          <h1>12 Weeks at Metis</h1>
-          <p class="lead">A Data Science Bootcamp Experience</p>
-          <p>by <a href="https://rosiehoyem.herokuapp.com">Rosie Hoyem</a></p>
-          <button class="btn btn-primary btn-lg"><a href="{{ url_for('metis_blog_0') }}">Start From the Beginning</a></button>
-        </div>
+      <div class='text-center'>
+        <h1>12 Weeks at Metis</h1>
+        <h4="lead">A Data Science Bootcamp Experience by <a href="https://rosiehoyem.herokuapp.com">Rosie Hoyem</a></h4>
       </div>
       <hr>
       <img src="{{ url_for('static', filename = 'bean_udnie.jpg') }}" width="100%">
       <br>
-      <p class='pull-right'><em>Image created using TensorFlow</em></p>  
+      <p class='pull-right'><em>Image created using TensorFlow</em></p> 
+      <br>
+      <hr> 
+      <p class="lead">I attended the Metis Data Science program in Chicago from January to April of 2017. I've collected a detailed account of that experience here. If you're thinking of applying to do a data science program like Metis, I hope you find this helpful in making your decision. If you're here because you might want to hire me, I hope this gives you some insight into how I think and what I learned during this experience.
+      </p>
+      <p class="lead">
+        I've included several "cheat sheet" sections on topics such as <a href="https://metis-experience.herokuapp.com/metis_blog_2#class-algos">classification algorithms</a>, <a href="https://metis-experience.herokuapp.com/metis_blog_3#clust-algos">clusting algorithms</a>, and <a href="https://metis-experience.herokuapp.com/metis_blog_3#big-data">big data concepts</a>. I also include a write-up of my <a href="https://metis-experience.herokuapp.com/metis_blog_5">final passion project</a> and closing thoughts. 
+      </p>
+      <hr>
+      <div class='text-center'>
+        <button class="btn btn-primary btn-lg"><a href="{{ url_for('metis_blog_0') }}">Start From the Beginning</a></button>
+      </div>
     </div><!-- /.container -->
+    <br />
     <footer class="blog-footer">
       <p>Thoughts shared here belong to <a href="http://rosiehoyem.herokuapp.com">Rosie Hoyem</a>.</p>
       <p>

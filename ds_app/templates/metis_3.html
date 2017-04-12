@@ -3,6 +3,56 @@
 <div class="blog-post">
   <h2 class="blog-post-title">Onsite in Chicago, Weeks 7-9</h2>
   <p class="blog-post-meta">February 27th through March 17th, 2017</p>
-
-  <h3>Coming Soon.</h3>
+  <p>Week 7 we dove into unsupervised learning clustering algorithms and natural language processing methods such as Kmeans, Word2Vec, and LDA. We also tackled different dimmensionality reduction strategies to combat the dreaded 'Curse of Dimensionality'. Week 8 we covered Neural Nets and Recommendation Systems.
+  </p>
+  <h3>Clustering Models</h3>
+  <a name="clust-algos"></a>
+  {% for model in cm %}
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3>{{ model.name }}</h3>
+      <p><strong>Key Concept:</strong></p>  
+      <p>{{ model.key_concept|safe }}</p>
+      <p><strong>Assumptions:</strong></p>  
+      <p>{{ model.assumptions|safe }}</p>
+      <p><strong>Steps:</strong></p>  
+      <p>{{ model.steps|safe }}</p>
+      <p><strong>Hyperparameters:</strong></p>  
+      <p>{{ model.hyper_parameters|safe }}</p>
+      <p><strong>Computation Time:</strong></p>
+      <p>{{ model.computation_time|safe }}</p>
+      <hr>
+      <h4>Model Characteristics:</h4>  
+      <table class='table table-striped'>
+        <tr>
+          <td>Pros</td>
+          <td>Cons</td>
+        </tr>
+        <tr>
+          <td>{{ model.pros|safe }}</td>
+          <td>{{ model.cons|safe }}</td>
+        </tr>
+      </table>  
+    </div>
+  </div> 
+  <hr>
+  {% endfor %}
+  <p>
+  Week 8 was Big Data week. Though we only covered most of these topics in introductory depth, we were given the tools and context to easily tackle further study on our own. Many of us did put these technologies to work in our final projects for further practice. Technologies we covered included Docker, Hadoop, Hive, and Spark.
+  </p>
+  <h3>Big Data Concepts</h3>
+  <a name="big-data"></a>
+  {% for concept in bd %}
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h4>{{ concept.name}}</h4> 
+      <strong>Key Concepts</strong>
+      <p>{{ concept.key_concept }}</p>
+      <strong>Applications</strong>
+      <p>{{ concept.application }}</p>
+    </div>
+  </div>
+  <hr>
+  {% endfor %}
+</div>
 {% endblock %}

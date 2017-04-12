@@ -20,6 +20,22 @@ def get_classification_models():
     models = pd.read_csv(url,index_col=False)
     return models.to_dict(orient = "records")
 
+def get_clustering_models():
+    base = "https://docs.google.com/spreadsheets/d/"
+    doc_id = "13uFW3lriigsAKJTAn_Ilo3fo7ZdeLUKbtqOe65Bf4iw"
+    export_sheet = "/export?gid=307169533&format=csv"
+    url = base + doc_id + export_sheet
+    models = pd.read_csv(url,index_col=False)
+    return models.to_dict(orient = "records")
+
+def get_bigdata_concepts():
+    base = "https://docs.google.com/spreadsheets/d/"
+    doc_id = "13uFW3lriigsAKJTAn_Ilo3fo7ZdeLUKbtqOe65Bf4iw"
+    export_sheet = "/export?gid=251852757&format=csv"
+    url = base + doc_id + export_sheet
+    models = pd.read_csv(url,index_col=False)
+    return models.to_dict(orient = "records")
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -39,7 +55,9 @@ def metis_blog_2():
 
 @app.route('/metis_blog_3')
 def metis_blog_3():
-    return render_template('metis_3.html')
+    clustering_models = get_clustering_models()
+    bigdata_concepts = get_bigdata_concepts()
+    return render_template('metis_3.html', cm=clustering_models, bd=bigdata_concepts)
 
 @app.route('/metis_blog_4')
 def metis_blog_4():
@@ -47,5 +65,5 @@ def metis_blog_4():
 
 @app.route('/metis_blog_5')
 def metis_blog_5():
-    return render_template('metis_4.html')
+    return render_template('metis_5.html')
 

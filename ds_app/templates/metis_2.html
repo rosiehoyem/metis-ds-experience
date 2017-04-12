@@ -11,15 +11,15 @@
   <p>My topic, what factors contribute to high schools successfully preparing kids for college, seemed like a straightforward enough project. Alas, it was not. Although the data I collected did not come together how I had hoped, I did manage to get some practice working with a variety of classification models.</p>
 
   <h3>Classification Models</h3>
-
+  <a name="class-algos"></a>
   {% for model in cm %}
   <div class="panel panel-default">
     <div class="panel-body">
       <h3>{{ model.name }}</h3>
       <p><strong>Key Concept:</strong></p>  
-      <p>{{ model.key_concept }}</p>
+      <p>{{ model.key_concept|safe }}</p>
       <p><strong>Assumptions:</strong></p>  
-      <p>{{ model.assumptions }}</p>
+      <p>{{ model.assumptions|safe }}</p>
       <p><strong>Steps:</strong></p>  
       <p>{{ model.steps|safe }}</p>
       <p><strong>Hyperparameters:</strong></p>  
@@ -29,15 +29,15 @@
       <table class='table table-striped'>
         <tr>
           <td>Interpretability</td>
-          <td>{{ model.interpretability }}</td>
+          <td>{{ model.interpretability|safe }}</td>
         </tr>
         <tr>
           <td>Computation Time</td>
-          <td>{{ model.computation_time }}</td>
+          <td>{{ model.computation_time|safe }}</td>
         </tr>
         <tr>
           <td>Accuracy</td>
-          <td>{{ model.accuracy }}</td>
+          <td>{{ model.accuracy|safe }}</td>
         </tr>
       </table>  
     </div>
