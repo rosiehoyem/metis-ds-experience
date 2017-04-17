@@ -4,18 +4,21 @@
   <h2 class="blog-post-title">Onsite in Chicago, Weeks 1-3</h2>
   <p class="blog-post-meta">January 17 through February 3rd, 2017</p>
 
-  <h3>Off and Running with Python and Linear Regression</h3>
+  <h3>Off and Running with Python and Our First Project</h3>
 
-  <p>Week one of the program was coined "The Essentials" included a quick dive into the Python libraries we would be using throughout the course of this program.<p> 
+  <p>Week one of the program was coined "The Essentials" and included a quick dive into the Python libraries we would be using throughout the course of this program. For example:<p> 
+
   <ul>
-    <li>Day one was Pandas and we were given our first project, Benson</li>
-    <li>Day two we dove into visualizations using Matplotlib and Seaborn,</li> 
-    <li>Day three we reviewed Git and dove into our projects</li>  
-    <li>Day four we did more advanced Pandas</li>
-    <li>Day five we presented Benson</li>
+    <li>Day one we explored Pandas and were given our first project, Benson.</li>
+    <li>Day two we dove into visualizations using Matplotlib and Seaborn.</li> 
+    <li>Day three we reviewed Git and worked on our projects.</li>  
+    <li>Day four we did more advanced Pandas.</li>
+    <li>Day five we presented our first project, Benson.</li>
   </ul>
 
-  <p>It was a whirlwind of a week. I was very thankful I worked through the Udemy course <a href="https://www.udemy.com/python-for-data-science-and-machine-learning-bootcamp/learn/v4/overview">Python for Data Science and Machine Learning Bootcamp</a> before beginning this program or I would have been quite overwhelmed. Project Benson was a group project that got us using the Python skills we learning right away with real data. I did a quick write-up of our project on my personal site <a href="https://rosiehoyem.herokuapp.com/projects/benson">here</a>.</p>
+  <p>It was a whirlwind of a week. I was very thankful I worked through the Udemy course <a href="https://www.udemy.com/python-for-data-science-and-machine-learning-bootcamp/learn/v4/overview">Python for Data Science and Machine Learning Bootcamp</a> before beginning this program or I would have been quite overwhelmed. Project Benson was a group project that got us using the Python skills we were learning right away with real data. I did a quick write-up of our project on my personal site <a href="https://rosiehoyem.herokuapp.com/projects/benson">here</a>.</p>
+
+  <h3>Intro to Machine Learning and Linear Regression</h3>
 
   <p>Week two of the program was our introduction to Machine Learning and Linear Regression. We also began our second project, Luther, and learned about web scraping.<p> 
 
@@ -26,35 +29,30 @@
     <li>We finished the week of looking at probability.</li>
   </ul>
 
-  <p>In the prework, we had been required to go through the book <a href="http://greenteapress.com/thinkstats/">Think Stats</a>. This was an important foundation for this week as we quickly cruised through interpretting the model and the undlying assumptions of Linear Regression and important concepts such as T-tests, colinearity, normality of the residuals, transformations, and many other topics relevant to creating solid models.<p>
+  <p>In the prework, we had been required to go through the book <a href="http://greenteapress.com/thinkstats/">Think Stats</a>. This was an important foundation for this week as we quickly cruised through interpretting the model and the undlying assumptions of Linear Regression. We also touched upon the important concepts such as T-tests, colinearity, normality of the residuals, transformations, and many other topics relevant to creating solid models.<p>
 
-  <p>Week three we continued to look at Linear Regression with a deeper dive into the assumptions behind it and also Regularization. On Friday of this week we also presented Luther, our second project.</p>
-   
-  <ul>
-    <li>Day one was Pandas and we were given our first project, Benson</li>
-    <li>Day two we dove into visualizations using Matplotlib and Seaborn,</li> 
-    <li>Day three we reviewed Git and dove into our</li>  
-    <li>Day four we did more advanced Pandas</li>
-    <li>Day five we presented Benson</li>
-  </ul>
+  <p>Week three we continued to look at Linear Regression with a deeper dive into the assumptions behind it and also Regularization. On Friday of this week we presented Luther, our second project.</p>
 
   <h3>The Luther Project Take-Aways</h3>
 
-  <p>For the Luther project I chose to look at <a href="http://www.minneapolismn.gov/environment/energy/WCMS1P-120169">Building Energy Benchmarking in Minneapolis</a>. The goal of the project was to create a simple Linear Regression model predicting a property's Energy Star Score. I ambitiously decided to try combine three different data sources for this project. A large portion of this project was spent just gathering the data and really putting my Python skills to work cleaning it up. Each was it's own challenge.</p>
+  <p>For the Luther project I chose to look at <a href="http://www.minneapolismn.gov/environment/energy/WCMS1P-120169">Building Energy Benchmarking in Minneapolis</a>. The goal of the project was to create a simple Linear Regression model predicting a property's Energy Star Score. I ambitiously decided to try combine three different data sources for this project. A large portion of my time was spent gathering the data and really putting my Python skills to work cleaning it up. Each data source was it's own challenge.</p>
 
   <ul>
-    <li><strong>Energy Benchmarking Data</strong> from the city of Minneapolis. This data contained ~250 buildings, but was obviously put together by hand as the formating was not consistent. This because a huge headache as I tried to automate the process of using the address to match with property IDs.</li>
-    <li><strong>Hennepin County Parcel Data</strong> was easily obtainable from the county's website, but it was not straight forward how to extract the table information. Again, with the use of some Python magic, I was able to extract the information I needed.</li>
+    <li><strong>Energy Benchmarking Data</strong> from the city of Minneapolis. This data contained ~250 buildings, but was obviously put together by hand as the formating was not consistent. This became a huge headache as I tried to automate the process of using the address to search for property info.</li>
+    <li><strong>Hennepin County Parcel Data</strong> was easily obtainable from the county's website as a shapefile, but it was not straight forward how to extract the table information. Again, with the use of some Python magic, I was able to extract the information I needed.</li>
     <li><strong>Property Info</strong> from the city of Minneapolis website was obtained by scraping the site using Beautiful Soup and Selenium. This process was imperfect as it required automating the process of searching by address and navigating the variety of responses that were returned.</li>
   </ul> 
 
   <p>It was a good exercise in gathering data as well as a lesson in how to handle a project where the results are stubborn in coming together due to the messiness of the data -- a very real world scenario. I did a write-up of the project results <a href="https://rosiehoyem.herokuapp.com/projects/luther">here.</a>
 
-  <p>Here I wanted to take a few minutes to talk through the major concepts we learned during these weeks and how they all came together in Benson and share some code. This project was far from perfect, but did act as a good learning exercise to better understand Linear Regression. Scikit Learn and Stats Model are two Python libraries that make it quite easy to implement Linear Regression. The challenging part is interpretting the model and making sure the model does not violate the base assumptions of Linear Regression (which are many).</p>  
+  <p>Here I wanted to take a few minutes to talk through the major concepts we learned during these weeks and how they all came together in Benson. This project was far from perfect, but did act as a good learning exercise to better understand Linear Regression.</p>
+
+  <p>
+    Scikit Learn and Stats Model are two Python libraries that make it quite easy to implement Linear Regression. The challenging part is interpretting the model and making sure the model does not violate the base assumptions of Linear Regression (which are many).</p>  
 
   <h3>OLS Linear Regression First Pass</h3>
 
-  <p>After collecting data and doing a fair amount of wrangling to combine 3 data sources, I arrived a dataset of just over 300 properties. I then began the modeling process. As an example, let's take this results summary from and initial pass I did with OLS Linear Regression. I should not also that for this modeling exercise, I did not leave out a portion of the data to act as a test set as I am not trying to predict anything. I opted instead for optimal use of the data I have in order to understand what features had the most influence.</p>
+  <p>After collecting data and doing a fair amount of wrangling to combine 3 data sources, I arrived a dataset of just over 300 properties. I then began the modeling process. As an example, let's take this results summary from an initial pass I did with OLS Linear Regression. I should note also that for this modeling exercise, I did not leave out a portion of the data to act as a test set as I am not trying to predict anything. I opted instead for optimal use of the data I have in order to understand what features had the most influence.</p>
 
   <!-- Image of Summary Results -->
 
@@ -63,19 +61,19 @@
   <p>The main assumptions of Linear Regression are as follows:</p>
 
   <ul>
-    <li>The residuals are normally distributed.</li>
-    <li>The features are independent.</li>
+    <li>Linear relationshipa</li>
+    <li>Multivariate normalitya</li>
+    <li>No or little multicollinearitya</li>
+    <li>No auto-correlationa</li>
+    <li>Homoscedasticity</li>
   </ul>
 
   <p>Some tests we can use to test these assumptions:</p>
   <ul>
-    <li>
-      R2: SSE/SSS is the portion of variation explained by the model
-    </li>
     <li>Prob (F-statisic): If p-value < 0.05, we  can reject the null hypothesis.</li>
     <li>P >|t|: if p-value < 0.05, we can reject the null hypothesis: This variable does contribute to this model</li>
     <li>
-      Prob(Omnibus): The p-value for this  test. If p-value < 0.05, we reject the null  hypothesis, meaning that we have violated the assumptions linear regression does  not exactly follow  the normal  distribution that  we  assumed.</li>     
+      Prob(Omnibus): The p-value for this  test. If p-value < 0.05, we reject the null  hypothesis, meaning that the residuals do not exactly follow the normal distribution that we assumed.</li>     
     <li>
       Jaque Beara: Normality Test
     </li>
@@ -86,7 +84,7 @@
       Skewness and Kurtosis: Idea is we  are looking for a skewness coeff.  ~ 0,  and Kurtosis  ~ 3. JB  tests if  those conditions are held against alternatives.
     </li>  
     <li>
-      Condition Number: Note that is the condition number  becomes quite large, then this  implies that  the matrix is ill-posed  (does not have a unique, well-defined solution). This may be due to multicollinear relationships between independent variables.
+      Condition Number: Note that as the condition number  becomes quite large, then this  implies that  the matrix is ill-posed (does not have a unique, well-defined solution). This may be due to multicollinear relationships between independent variables.
     </li>
   </ul>
 </div>
