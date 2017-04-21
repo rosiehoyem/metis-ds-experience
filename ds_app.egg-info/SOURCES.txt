@@ -6,14 +6,16 @@ ds_app.egg-info/SOURCES.txt
 ds_app.egg-info/dependency_links.txt
 ds_app.egg-info/requires.txt
 ds_app.egg-info/top_level.txt
+ds_app/static/.DS_Store
 ds_app/static/Chart.min.js
-ds_app/static/bean_udnie.jpg
 ds_app/static/blog.css
 ds_app/static/bootstrap.css
 ds_app/static/bootstrap.min.js
 ds_app/static/flatly_bootstrap.css
+ds_app/static/images/bean_udnie.jpg
 ds_app/templates/.DS_Store
 ds_app/templates/index.html
+ds_app/templates/latest.html
 ds_app/templates/layout.html
 ds_app/templates/metis_0.html
 ds_app/templates/metis_1.html

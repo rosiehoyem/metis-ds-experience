@@ -4,11 +4,12 @@
   <h2 class="blog-post-title">Onsite in Chicago, Weeks 10-12</h2>
   <p class="blog-post-meta">March 20th through April 7th, 2017</p>
 
-  <p>The last few weeks of the program are heavily devoted to final project work, review, and preparing materials for the job hunt.  
+  <p>
+    The last few weeks of the program are heavily devoted to final project work, review, and preparing materials for the job hunt.  
   </p>
   <h3>Final Project</h3>
   <p>
-    For my final project I decided to tackle creating a Quantified Self data aggregation platform. The portion I completed for career day was in reality more of a data engineering project with a sprinkle of modeling, I wanted to get a bit of experience using cloud infrastructure and an ETL process manager. The project included pulling data from a variety of sources including Fitbit, Moves, Mint, Chrome, social media sites, and also contextual data such as the weather and sunrise/sunset times. The goal of the system was to automate pulling this data, aggregate it, and prepare it for analysis in near real time.</p>
+    For my final project I decided to tackle creating a Quantified Self data aggregation platform. The portion I completed for career day was, in reality, more of a data engineering project with a sprinkle of modeling. I wanted to get a bit of experience using cloud infrastructure and an ETL process manager. The project included pulling data from a variety of sources including Fitbit, Moves, Mint, Chrome, social media sites, and also contextual data such as the weather and sunrise/sunset times. The goal of the system was to automate pulling this data, aggregate it, and prepare it for analysis in near real-time.</p>
   <p>
     The architecture of the system included a Postgres data store on the backend which holds all of the raw data. On the front-end I built a Rails app that manages user information and hosts the UI. For a process manager I decided to use <a href="https://airflow.incubator.apache.org">Airflow</a>. Airflow is tool created by the team at AirBnb. Just this past year it was picked-up as a project by Apache and is now receiving more attention. The tool, though essentially a Flask app (which I've become quite familiar with), was a challenge to work with as the documentation is currently lacking. I found it's approach to be useful for the tasks I had to manage. Here is a brief <a href="https://gist.github.com/rosiehoyem/9e111067fe4373eb701daf9e7abcc423">'How To' I put together to document how I set-up Airflow</a> for future reference.
   </p>

@@ -67,3 +67,7 @@ def metis_blog_4():
 def metis_blog_5():
     return render_template('metis_5.html')
 
+@app.route('/latest_work')
+def latest_work():
+    return render_template('latest.html')
+
